@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUST Online Application Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1 class="title">MBARARA UNIVERSITY OF<br>SCIENCE AND TECHNOLOGY</h1>
+  <main class="login">
+
+    <h2>Welcome back</h2>
+
+    <form id="loginForm">
+      <label for="email">Email address</label>
+      <input id="email" type="email" placeholder="name@example.com" autocomplete="username" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+      <button type="submit">Sign in</button>
+      <p class="status" role="status"></p>
+    </form>
+    <p class="forgot"><a href="https://applications.must.ac.ug/" target="_blank" rel="noopener">Forgot your password?</a></p>
+    <div class="create-account">
+      <p>New to the portal?</p>
+      <button type="button" id="openRegister">Create account</button>
+    </div>
+
+  </main>
+
+  <p class="footer">All rights reserved.</p>
+  <dialog id="registerModal" class="modal-overlay" aria-labelledby="registerTitle">
+    <div class="register-window">
+      <button type="button" class="close-modal" id="closeRegister" aria-label="Close registration">&times;</button>
+      <h2 id="registerTitle">Create account</h2>
+
+      <p>Enter your details to create an account.</p>
+      <form id="registerForm">
+        <label for="surname">Surname</label>
+        <input id="surname" placeholder="Surname" autocomplete="family-name" required>
+        <label for="otherNames">Other names</label>
+        <input id="otherNames" placeholder="Other names" autocomplete="given-name" required>
+        <label for="phone">Phone number</label>
+        <input id="phone" type="tel" placeholder="0770000000" autocomplete="tel" pattern="[0-9+ ()\-]{7,18}" required>
+        <p class="hint">Use an active phone number to receive notifications.</p>
+        <label for="registerEmail">Email address</label>
+        <input id="registerEmail" type="email" placeholder="name@example.com" autocomplete="email" required>
+        <button type="submit" class="register-submit">Create account</button>
+        <p class="status" role="status"></p>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>
+
